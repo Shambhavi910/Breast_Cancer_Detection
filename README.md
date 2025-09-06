@@ -1,61 +1,101 @@
-### Breast Cancer Detection
+## 🩺 Breast Cancer Detection
 
-Breast cancer is one of the most common cancers worldwide, and early detection can make a huge difference in treatment outcomes. This project is my attempt to build a machine learning model that can help in predicting whether a tumor is benign or malignant based on medical imaging data.
+This project demonstrates how machine learning can be applied to predict whether a breast tumor is benign or malignant using the Breast Cancer Wisconsin dataset.
 
-I wanted to work on this not just as a coding exercise, but as something meaningful — a small step toward applying data science in healthcare, where even small improvements can have real impact.
+The notebook walks through data loading, preprocessing, model training, evaluation, and building a simple predictive system. While this is primarily a learning project, it highlights the potential of data-driven approaches in healthcare research.
 
-### 📌 Project Overview
+### Dataset
 
-Dataset: The Breast Cancer Wisconsin dataset, available directly from sklearn.datasets.
+Source: Breast Cancer Wisconsin dataset (available via sklearn.datasets.load_breast_cancer()).
 
-Goal: Train and evaluate a machine learning model that predicts tumor type.
-
-Features: Characteristics of cell nuclei (mean radius, texture, perimeter, area, smoothness, etc.).
+Features: 30 numerical features describing cell nuclei (e.g., radius, texture, smoothness).
 
 Target:
 
-0 → malignant
+0 → Malignant
 
-1 → benign
+1 → Benign
 
-### ⚙️ Technologies Used
+Samples: 569
 
-Python 3.13
+### Workflow
 
-Pandas for data handling
+Data Collection and Processing
 
-NumPy for numerical operations
+Loaded dataset from scikit-learn
 
-Matplotlib / Seaborn for visualization
+Converted into a Pandas DataFrame
 
-Scikit-learn for machine learning
+Explored statistical measures and class distribution
 
-### 🚀 Steps in the Project
+Feature & Target Separation
 
-Data Loading – Loaded the dataset using sklearn.datasets.load_breast_cancer().
+Features (X) contain cell characteristics
 
-Data Preprocessing – Created a pandas DataFrame, added target labels, and did some cleaning.
+Target (Y) represents tumor class
 
-Exploratory Data Analysis (EDA) – Plotted distributions and correlations to understand the data better.
+Train-Test Split
 
-Model Building – Trained ML models such as Logistic Regression, Decision Trees, and Random Forests.
+Split dataset into training (80%) and testing (20%)
 
-Evaluation – Compared models using accuracy, confusion matrix, precision, recall, and F1-score.
+Model Training
 
-### 📊 Results
+Logistic Regression model trained on the training set
 
-The Random Forest classifier performed the best (so far), with high accuracy on both training and test sets.
+Model Evaluation
 
-Logistic Regression also performed surprisingly well, proving that sometimes simple models work best.
+Accuracy measured on training and testing sets
 
-### 🌱 Future Improvements
+Model achieved high accuracy on both
 
-Experiment with more advanced models (e.g., SVM, XGBoost, Neural Networks).
+Predictive System
 
-Use hyperparameter tuning for better optimization.
+Allows user to input feature values
 
-Deploy the model as a simple web app so others can test it interactively.
+Predicts whether the tumor is benign or malignant
 
-❤️ A Note
+### Technologies Used
 
-This project is not meant to replace medical diagnosis. It’s a learning project that explores how machine learning can be applied in healthcare. I hope to keep improving it and maybe one day contribute to something that could actually help doctors and patients.
+Python 
+
+NumPy
+
+Pandas
+
+Scikit-learn
+
+### How to Run
+
+Clone the repository:
+
+git clone https://github.com/Shambhavi910/Breast_Cancer_Detection.git
+cd Breast_Cancer_Detection
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Open the Jupyter Notebook:
+
+jupyter notebook Breast_cancer_detection.ipynb
+
+### Results
+
+Logistic Regression achieved high accuracy on both training and test datasets.
+
+Predictive system successfully classifies new data inputs as malignant or benign.
+
+### Future Enhancements
+
+Experiment with additional models (Random Forest, SVM, Neural Networks).
+
+Perform hyperparameter tuning for improved performance.
+
+Deploy the predictive system using Flask or Streamlit.
+
+### Disclaimer
+
+This project is for educational purposes only.
+It is not intended for medical or clinical use. Always consult healthcare professionals for diagnosis and treatment.

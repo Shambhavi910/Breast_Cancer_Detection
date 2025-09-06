@@ -47,7 +47,7 @@ The notebook walks through data loading, preprocessing, model training, evaluati
 
 ### Technologies Used
 
-- Python (>=3.8)  
+- Python (3.12)  
 - NumPy  
 - Pandas  
 - Scikit-learn  
